@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView helloText = this.findViewById(R.id.helloText);
         helloText.setText("Hello");
+
+        helloText.setTextColor(getResources().getColor(R.color.colorAccent));
     }
 
 }
