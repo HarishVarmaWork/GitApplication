@@ -16,12 +16,6 @@ public class MainActivity extends AppCompatActivity {
         TextView helloText = this.findViewById(R.id.helloText);
         helloText.setText("Hello");
 
-        helloText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Hello",Toast.LENGTH_LONG).show();
-            }
-        });
 
 
 
@@ -35,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("LongClick","Long click");
             }
         });
+
+        helloText.setTextColor(getResources().getColor(R.color.colorAccent));
+
     }
 
 }
