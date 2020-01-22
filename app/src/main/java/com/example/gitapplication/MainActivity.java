@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        
-        //
+
+        //long click
 
         helloText.setOnClickListener(new View.OnClickListener() {
             @Override
