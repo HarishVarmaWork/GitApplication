@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         helloText.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+                Toast.makeText(MainActivity.this,"Starting new activity",Toast.LENGTH_LONG).show();
                 startActivity(new Intent(MainActivity.this, Main2Activity.class));
                 return false;
             }
