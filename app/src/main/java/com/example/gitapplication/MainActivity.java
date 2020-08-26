@@ -1,5 +1,6 @@
 package com.example.gitapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,16 +18,21 @@ public class MainActivity extends AppCompatActivity {
         helloText.setText("Hello");
 
 
-
-
-
-
         //long click 1
+
+        helloText.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(MainActivity.this,"Starting new activity",Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
+                return false;
+            }
+        });
 
         helloText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("LongClick","Long click");
+                Log.e("LongClick", "Long click");
             }
         });
 
